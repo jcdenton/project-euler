@@ -1,11 +1,6 @@
 from itertools import ifilter
 
-
-def fib(n):
-    current, inc = 0, 1
-    while current < n:
-        yield current
-        current, inc = inc, current + inc
+from util import fib
 
 
 print sum(ifilter(

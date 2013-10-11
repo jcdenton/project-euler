@@ -2,20 +2,7 @@ from collections import deque
 from itertools import takewhile, imap
 from operator import itemgetter
 
-
-def primes():
-    D = {}
-    q = 2
-
-    while True:
-        if q not in D:
-            yield q
-            D[q * q] = [q]
-        else:
-            for p in D[q]:
-                D.setdefault(p + q, []).append(p)
-            del D[q]
-        q += 1
+from util import primes
 
 
 print deque(
